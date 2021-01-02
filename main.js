@@ -67,8 +67,8 @@ const openCard = (card) => {
         front.classList.add('opened');
     }
 
-    setTimeout(() => {
-        if (chooses.length === 2) {
+    if (chooses.length === 2) {
+        setTimeout(() => {
             if (!isMatched(chooses[0], chooses[1])) {
                 closeChosenCards();
                 chooses = [];
@@ -80,8 +80,8 @@ const openCard = (card) => {
                 }
             }
             chooses = [];
-        }
-    }, 1500)
+        }, 750);
+    }
 }
 
 const closeChosenCards = () => {
